@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+
+    <h2>IT Asset Management System</h2>
+
+    <div>
+
+        Welcome, {{ username }}
+
+        <a
+            href="{{ url_for('logout') }}"
+            class="btn btn-danger"
+        >
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ================= MAIN CONTAINER ================= -->
+
+<div class="container">
+
+    <!-- ================= FLASH MESSAGE ================= -->
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% if messages %}
+
+            {% for category, message in messages %}
+
+                <div class="flash">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+    <!-- ================= CARDS ================= -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Total Assets</h3>
+
+            <p>{{ total_assets }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Active Assets</h3>
+
+            <p>{{ active_assets }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Repair Assets</h3>
+
+            <p>{{ repair_assets }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Retired Assets</h3>
+
+            <p>{{ retired_assets }}</p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= ACTIONS ================= -->
+
+    <div class="top-actions">
+
+        <!-- ADD BUTTON -->
+
+        <a
+            href="{{ url_for('add_asset') }}"
+            class="btn"
+        >
+            + Add Asset
+        </a>
+
+        <!-- SEARCH -->
+
+        <form method="GET">
+
+            <input
+                class="search-box"
+                type="text"
+                name="search"
+                placeholder="Search Employee..."
+            >
+
+        </form>
+
+    </div>
+
+    <!-- ================= TABLE ================= -->
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Asset Name</th>
+
+            <th>Asset Type</th>
+
+            <th>Employee</th>
+
+            <th>Created Date & Time</th>
+
+            <th>Status</th>
+
+            <th>Reason</th>
+
+            <th class="actions">
+                Actions
+            </th>
+
+        </tr>
+
+        {% for asset in assets %}
+
+        <tr>
+
+            <td>
+
+                {{ asset.id }}
+
+            </td>
+
+            <td>
+
+                {{ asset.asset_name }}
+
+            </td>
+
+            <td>
+
+                {{ asset.asset_type }}
+
+            </td>
+
+            <td>
+
+                {{ asset.employee }}
+
+            </td>
+
+            <td>
+
+                {{ asset.assigned_date.strftime('%d-%m-%Y %I:%M %p') }}
+
+            </td>
+
+            <td>
+
+                {% if asset.status == 'Active' %}
+
+                    <span
+                        style="
+                            color:green;
+                            font-weight:bold;
+                        "
+                    >
+
+                        {{ asset.status }}
+
+                    </span>
+
+                {% elif asset.status == 'Repair' %}
+
+                    <span
+                        style="
+                            color:orange;
+                            font-weight:bold;
+                        "
+                    >
+
+                        {{ asset.status }}
+
+                    </span>
+
+                {% else %}
+
+                    <span
+                        style="
+                            color:red;
+                            font-weight:bold;
+                        "
+                    >
+
+                        {{ asset.status }}
+
+                    </span>
+
+                {% endif %}
+
+            </td>
+
+            <td>
+
+                {{ asset.reason }}
+
+            </td>
+
+            <!-- ACTION BUTTONS -->
+
+            <td class="actions">
+
+                <a
+                    href="{{ url_for('edit_asset', id=asset.id) }}"
+                    class="btn btn-warning"
+                >
+                    Edit
+                </a>
+
+                <a
+                    href="{{ url_for('delete_asset', id=asset.id) }}"
+                    class="btn btn-danger"
+                >
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+
+</html>

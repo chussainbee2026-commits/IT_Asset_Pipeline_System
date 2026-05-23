@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Asset Monitoring System</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IT Asset Monitoring & Data Pipeline System</h1>
+
+    <div class="card">
+        <h3>Dashboard</h3>
+        <p><strong>Total Assets:</strong> {{ total_assets }}</p>
+        <p><strong>Active Assets:</strong> {{ active_assets }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Add Asset</h3>
+
+        <form method="POST" action="/add_asset">
+            <input type="text" name="asset_name" placeholder="Asset Name" required>
+
+            <input type="text" name="category" placeholder="Category" required>
+
+            <select name="status">
+                <option>Active</option>
+                <option>Under Repair</option>
+                <option>Retired</option>
+            </select>
+
+            <input type="text" name="employee_name" placeholder="Employee Name" required>
+
+            <button type="submit">Add Asset</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <a href="/generate_report">
+            <button>Generate CSV Report</button>
+        </a>
+    </div>
+
+    <h3>Asset Records</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Asset Name</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Employee</th>
+            <th>Created At</th>
+        </tr>
+
+        {% for asset in assets %}
+        <tr>
+            <td>{{ asset.id }}</td>
+            <td>{{ asset.asset_name }}</td>
+            <td>{{ asset.category }}</td>
+            <td>{{ asset.status }}</td>
+            <td>{{ asset.employee_name }}</td>
+            <td>{{ asset.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <h3>Recent Activity Logs</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Asset</th>
+            <th>Activity</th>
+            <th>Time</th>
+        </tr>
+
+        {% for log in logs %}
+        <tr>
+            <td>{{ log.id }}</td>
+            <td>{{ log.asset_name }}</td>
+            <td>{{ log.activity }}</td>
+            <td>{{ log.log_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Asset</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+
+    <h2>IT Asset Management System</h2>
+
+    <div>
+
+        <a
+            href="{{ url_for('dashboard') }}"
+            class="btn"
+        >
+            Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ================= FORM CONTAINER ================= -->
+
+<div class="form-box">
+
+    <h2>Edit Asset</h2>
+
+    <!-- ================= FORM ================= -->
+
+    <form method="POST">
+
+        <!-- ASSET NAME -->
+
+        <input
+            type="text"
+            name="asset_name"
+            value="{{ asset.asset_name }}"
+            placeholder="Asset Name"
+            required
+        >
+
+        <!-- ASSET TYPE -->
+
+        <input
+            type="text"
+            name="asset_type"
+            value="{{ asset.asset_type }}"
+            placeholder="Asset Type"
+            required
+        >
+
+        <!-- EMPLOYEE -->
+
+        <input
+            type="text"
+            name="employee"
+            value="{{ asset.employee }}"
+            placeholder="Employee Name"
+            required
+        >
+
+        <!-- STATUS -->
+
+        <select name="status">
+
+            <option
+            value="Active"
+            {% if asset.status == 'Active' %}
+            selected
+            {% endif %}
+            >
+            Active
+            </option>
+
+            <option
+            value="Repair"
+            {% if asset.status == 'Repair' %}
+            selected
+            {% endif %}
+            >
+            Repair
+            </option>
+
+            <option
+            value="Retired"
+            {% if asset.status == 'Retired' %}
+            selected
+            {% endif %}
+            >
+            Retired
+            </option>
+
+        </select>
+
+        <!-- REASON -->
+
+        <textarea
+            name="reason"
+            placeholder="Reason"
+            rows="5"
+        >{{ asset.reason }}</textarea>
+
+        <!-- AUTO TIME MESSAGE -->
+
+        <p
+            style="
+                color: gray;
+                font-size: 14px;
+                margin-bottom: 15px;
+            "
+        >
+            Date & Time will update automatically
+            when asset is edited.
+        </p>
+
+        <!-- BUTTON -->
+
+        <button class="btn">
+
+            Update Asset
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

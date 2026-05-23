@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Add Asset</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h2>Add Asset</h2>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="asset_name"
+            placeholder="Asset Name"
+            required
+        >
+
+        <input
+            type="text"
+            name="asset_type"
+            placeholder="Asset Type"
+            required
+        >
+
+        <input
+            type="text"
+            name="employee"
+            placeholder="Employee Name"
+            required
+        >
+
+        <select name="status">
+
+            <option>Active</option>
+
+            <option>Repair</option>
+
+            <option>Retired</option>
+
+        </select>
+
+        <textarea
+            name="reason"
+            placeholder="Reason"
+        ></textarea>
+
+        <button class="btn">
+            Add Asset
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
