@@ -1,26 +1,75 @@
+# IT Asset Pipeline System
 
-# IT Asset Monitoring & Data Pipeline System
+A web-based IT Asset Management System developed using Flask and SQLite.  
+This application helps organizations manage and track IT assets efficiently.
+
+---
 
 ## Features
+
+- User Authentication
 - Asset Management
-- Employee Allocation
-- Activity Logging
-- CSV Report Generation
-- Dashboard
+- Add and Manage Assets
+- Employee Asset Tracking
+- Asset Status Management
+- Database Integration
+- Responsive User Interface
+
+---
 
 ## Technologies Used
+
 - Python
 - Flask
 - SQLite
-- Pandas
+- HTML
+- CSS
+- Bootstrap
+
+---
 
 ## Installation
 
-1. Install dependencies:
-   pip install -r requirements.txt
+```bash
+git clone https://github.com/chussainbee2026-commits/IT_Asset_Pipeline_System.git
+```
 
-2. Run application:
-   python app.py
+```bash
+cd IT_Asset_Pipeline_System
+```
 
-3. Open browser:
-   http://127.0.0.1:5000
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+python app.py
+```
+
+---
+
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login_page.png)
+
+---
+
+### Register Page
+![Register Page](screenshots/register_page.png)
+
+---
+
+### Asset Management Table
+![Asset Management](screenshots/asset_management_table.png)
+
+---
+
+### Assets Record Table
+![Assets Record](screenshots/assets_record_table.png)
+
+---
+
+## Author
+
+Hussain Bee
