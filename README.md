@@ -35,9 +35,6 @@ The application helps organizations efficiently manage IT assets, track employee
 
 #  Project Structure
 
-
-```text
-
 IT-Asset-Monitoring-System/
 │
 ├── static/
@@ -57,10 +54,7 @@ IT-Asset-Monitoring-System/
 
 ```
 
-
----
-
-#  Installation and Setup
+## Installation and Setup
 
 ## 1. Clone the Repository
 
@@ -197,8 +191,12 @@ This project is licensed under the MIT License.
 
 #  Author
 
-**Akram Hussain** & **Hussain bee**
-Python Developer | Flask Developer | Data Pipeline Enthusiast
+
+Hussain bee & Akram Hussain
+
+Aspiring Software Developer passionate about:
+
+Python Developer | AI Development | Web Technologies | Artificial Intelligence
 
 ---
 
