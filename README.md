@@ -35,11 +35,15 @@ The application helps organizations efficiently manage IT assets, track employee
 
 #  Project Structure
 
+
 ```text
+
 IT-Asset-Monitoring-System/
 │
 ├── static/
+│
 ├── templates/
+│
 ├── screenshots/
 │   ├── login_page.png
 │   ├── register_page.png
@@ -50,7 +54,9 @@ IT-Asset-Monitoring-System/
 ├── requirements.txt
 ├── asset_database.db
 └── README.md
+
 ```
+
 
 ---
 
