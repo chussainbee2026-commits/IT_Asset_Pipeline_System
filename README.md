@@ -35,21 +35,24 @@ The application helps organizations efficiently manage IT assets, track employee
 
 #  Project Structure
 
-IT-Asset-Monitoring-System/
+IT_Asset_Pipeline_System/
+│
+├── frontend/
+│ ├── login_page/
+│ ├── register_page/
+│ ├── user_interface/
+│
+├── backend/
+│ ├── admin_page/
+│ ├── tester_page/
+│ ├── developer_page/
+│
+├── database/
+│ └── schema.sql
 │
 ├── static/
-│
 ├── templates/
-│
-├── screenshots/
-│   ├── login_page.png
-│   ├── register_page.png
-│   ├── asset_management_table.png
-│   └── asset_record_table.png
-│
 ├── app.py
-├── requirements.txt
-├── asset_database.db
 └── README.md
 
 ```
