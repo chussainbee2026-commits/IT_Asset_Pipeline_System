@@ -1,208 +1,101 @@
-#  IT Asset Monitoring & Data Pipeline System
+##  IT Asset Pipeline System
 
-A professional web-based IT Asset Monitoring and Data Pipeline Management System developed using Flask, Python, SQLite, and Pandas.
+## Project Overview
 
-The application helps organizations efficiently manage IT assets, track employee allocations, monitor activity logs, and generate CSV-based reports through a centralized dashboard.
+The IT Asset Pipeline System is a web-based application designed to efficiently manage IT assets within an organization. It helps track asset allocation, maintain records, manage users, and streamline IT asset workflows.
 
-## Live Demo
+## This system includes modules for:
 
-### https://it-asset-data-pipeline-system.onrender.com/
+User authentication (Login/Register)
+Asset management
+Asset records tracking
+Admin control panel
+Secure and structured asset pipeline workflow
 
-#  Key Features
+## Features
+ User Login & Registration System
+ Asset Management Dashboard
+ Asset Records Table
+ Admin Panel
+ Organized asset tracking system
+ Screenshot documentation included
 
-- Secure User Authentication
-- IT Asset Management
-- Employee Asset Allocation
-- Asset Activity Logging
-- CSV Report Generation
-- Centralized Dashboard
-- Data Monitoring System
-- Responsive User Interface
-
----
-
-#  Technology Stack
-
-| Category | Technologies |
-|---|---|
-| Frontend | HTML5, CSS3, Bootstrap |
-| Backend | Python, Flask |
-| Database | SQLite |
-| Data Processing | Pandas |
-| Tools | Git, GitHub |
-
----
-
-#  Project Structure
+## Project Structure
 
 IT_Asset_Pipeline_System/
 │
-├── frontend/
-│ ├── login_page/
-│ ├── register_page/
-│ ├── user_interface/
-│
-├── backend/
-│ ├── admin_page/
-│ ├── tester_page/
-│ ├── developer_page/
-│
-├── database/
-│ └── schema.sql
+├── screenshots/
+│   ├── login_page.png
+│   ├── register_page.png
+│   ├── asset_management_table.png
+│   ├── asset_record_table.png
 │
 ├── static/
 ├── templates/
 ├── app.py
-└── README.md
+├── requirements.txt
+├── README.md
 
-```
+## Screenshots
 
-## Installation and Setup
 
-## 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/IT-Asset-Monitoring-System.git
-```
-
----
-
-## 2. Navigate to the Project Directory
-
-```bash
-cd IT-Asset-Monitoring-System
-```
-
----
-
-## 3. Create and Activate Virtual Environment
-
-### Windows
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Linux / macOS
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-## 4. Install Required Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 5. Run the Application
-
-```bash
-python app.py
-```
-
----
-
-#  Application URL
-
-```text
-http://127.0.0.1:5000
-```
-
----
-
-#  Application Screenshots
-
-##  Login Page
+# Login Page
 
 ![Login Page](screenshots/login_page.png)
 
----
+# Register Page
 
-##  Register Page
+![Register page](screenshots/register_page.png)
 
-![Register Page](screenshots/register_page.png)
+# Asset Management Table
 
----
+![Asset Management Table](screenshots/asset_management_table.png)
 
-##  Asset Management Table
+# Asset Record Table
 
-![Asset Management](screenshots/asset_management_table.png)
+![Asset Record Table](screenshots/asset_record_table.png)
 
----
+## Installation & Setup
+Bash
+# Clone the repository
+git clone https://github.com/chussainbee2026-commits/IT_Asset_Pipeline_System.git
 
-##  Asset Record Table
+# Move into project directory
+cd IT_Asset_Pipeline_System
 
-![Asset Record](screenshots/asset_record_table.png)
+# Create virtual environment (optional but recommended)
+python -m venv venv
 
----
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
 
-#  Core Modules
+# Install dependencies
+pip install -r requirements.txt
 
-## Asset Management
-- Add and manage IT assets
-- Monitor asset availability
-- Update asset information
+# Run the application
 
-## Employee Allocation
-- Assign assets to employees
-- Track allocation history
-- Manage employee records
+python app.py
+ 
+## Tech Stack
 
-## Activity Logging
-- Monitor asset activities
-- Track system events
-- Maintain usage history
+Python
 
-## CSV Report Generation
-- Export asset records
-- Generate analytical reports
-- Simplify data management
+Flask / Django 
 
----
+HTML, CSS, JavaScript
 
-#  Future Improvements
+SQLite / MySQL 
 
-- Email Notifications
-- Advanced Filtering and Search
-- Role-Based Authentication
-- REST API Integration
-- Dashboard Analytics
-- Cloud Database Support
-- Barcode/QR Asset Tracking
-
----
-
-#  Contribution
-
-Contributions are welcome.  
-Feel free to fork the repository and submit pull requests for improvements.
-
----
-
-#  License
-
-This project is licensed under the MIT License.
-
----
-
-#  Author
-
+## Author
 
 Hussain bee & Akram Hussain
 
 Aspiring Software Developer passionate about:
 
-Python Developer | AI Development | Web Technologies | Artificial Intelligence
+Python Development | Web Technologies | AI Development | Artificial Intelligence
 
----
+## Support
 
-#  Acknowledgement
-
-If you found this project useful, consider giving it a * on GitHub.
+If you found this project useful, consider giving it a * star on GitHub.
