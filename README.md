@@ -32,19 +32,34 @@ Secure and structured asset pipeline workflow
 
 ## Project Structure
 
-IT_Asset_Pipeline_System/
-│
-├── screenshots/
-│   ├── login_page.png
-│   ├── register_page.png
-│   ├── asset_management_table.png
-│   ├── asset_record_table.png
-│
-├── static/
-├── templates/
-├── app.py
-├── requirements.txt
-├── README.md
+## Project Structure
+
+- IT_Asset_Pipeline_System
+  - app.py
+  - config.py
+  - requirements.txt
+  - README.md
+  - static
+    - css
+    - js
+    - images
+  - templates
+    - login.html
+    - register.html
+    - admin_dashboard.html
+    - tester_dashboard.html
+    - developer_dashboard.html
+    - user_dashboard.html
+  - screenshots
+    - login_page.png
+    - register_page.png
+    - admin_page.png
+    - tester_page.png
+    - developer_page.png
+    - user_interface.png
+  - database
+    - asset_management.sql
+
 
 ## Screenshots
 
