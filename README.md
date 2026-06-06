@@ -7,17 +7,27 @@ The IT Asset Pipeline System is a web-based application designed to efficiently 
 ## This system includes modules for:
 
 User authentication (Login/Register)
+
 Asset management
+
 Asset records tracking
+
 Admin control panel
+
 Secure and structured asset pipeline workflow
 
 ## Features
+ 
  User Login & Registration System
+ 
  Asset Management Dashboard
+ 
  Asset Records Table
+ 
  Admin Panel
+ 
  Organized asset tracking system
+ 
  Screenshot documentation included
 
 ## Project Structure
